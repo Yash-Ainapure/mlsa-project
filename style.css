@@ -1,0 +1,134 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   scrollbar-width: none;
+}
+
+body {
+   font-family: 'Intern', sans-serif;
+}
+
+@font-face {
+   font-family: 'Intern';
+   src: url('intern.woff2') format('woff2'),
+      url('intern.woff') format('woff');
+}
+
+/* navbar */
+.navbar {
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 50px;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border-bottom: 2px solid #203A61;
+   background-color: #EDEDED;
+   /* gap: 40px; */
+   
+   position: fixed;
+   top: 0;
+   width: 100%;
+}
+
+.center-nav {
+   /* border: 1px solid red; */
+   width: 50%;
+   display: flex;
+   justify-content: space-evenly;
+   align-self: flex-end;
+   align-items: center;
+   list-style: none;
+}
+
+.nav-logo {}
+
+.nav-logo1 img {
+   width: 150px;
+   height: auto;
+}
+
+.nav-logo2 img {
+   width: 80px;
+   height: auto;
+}
+
+/* home page */
+.home-page {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.home-page-center {
+   padding: 200px;
+   display: flex;
+}
+
+.home-page-left {
+   padding: 20px;
+   width: 500px;
+}
+.home-page-left  p{
+   padding: 20px 0px;
+}
+
+.home-page-left h2 {
+   font-size: 54px;
+   text-align: left;
+}
+
+.home-page-left button {
+   margin: 20px 0px;
+   border: 1px solid #203A61;
+   background-color: #0078D4;
+   border-radius: 5px;
+   font-weight: 700;
+   color: #ffffff;
+   width: 150px;
+   height: 45px;
+}
+
+.home-page-right {}
+
+.home-page-right img {
+   width: 400px;
+   height: auto;
+}
+
+
+
+/* about page */
+.about-page {
+   border: 1px solid black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 100px;
+}
+
+.about-page-header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.about-page-center {
+   width: 80%;
+   padding: 20px;
+   background-color: #EDEDED;
+   border-radius: 10px;
+   display: flex;
+}
+
+.about-page-component{
+   border: 1px solid black;
+   width: 50%;
+}
+.about-page-component3{
+   border: 1px solid black;
+}
