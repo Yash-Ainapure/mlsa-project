@@ -22,13 +22,11 @@ body {
    align-items: center;
    justify-content: space-between;
    align-items: center;
-   padding: 10px 50px;
+   padding: 10px 40px;
    border-bottom-left-radius: 10px;
    border-bottom-right-radius: 10px;
-   border-bottom: 2px solid #203A61;
+   border-bottom: 3px solid #203A61;
    background-color: #EDEDED;
-   /* gap: 40px; */
-
    position: fixed;
    top: 0;
    width: 100%;
@@ -36,18 +34,51 @@ body {
 
 .center-nav {
    /* border: 1px solid red; */
-   width: 50%;
+   width: 40%;
    display: flex;
    justify-content: space-evenly;
    align-self: flex-end;
-   align-items: center;
    list-style: none;
-   padding-bottom: 15px;
+   margin-bottom: 15px;
+}
+
+.center-nav li a {
+   text-decoration: none;
+   color: black;
+   position: relative;
+   transition: color 0.3s ease;
+}
+
+.center-nav li a::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 0;
+   height: 2px;
+   background-color: #203A61;
+   transition: width 0.5s ease;
+}
+
+.center-nav li a:hover::after {
+   width: 100%;
+}
+
+.center-nav li a.active::after {
+   width: 100%;
+}
+
+.center-nav li a:hover {
+   color: #555;
 }
 
 .center-nav li a {
    color: black;
    text-decoration: none;
+}
+
+.center-nav li a.active {
+   font-weight: bold;
 }
 
 .nav-logo1 img {
@@ -96,18 +127,45 @@ body {
    height: 45px;
 }
 
-.home-page-right {}
-
 .home-page-right img {
    width: 400px;
    height: auto;
 }
 
 
+.join-button {
+   display: inline-block;
+}
+
+.join-button button {
+   background-color: #0078D4;
+   border: 2px solid #203A61;
+   color: white;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.join-button button:hover {
+   border-color: black;
+   transform: scale(1.05);
+}
+
+.join-button button:focus {
+   outline: none;
+}
+
+.join-button button:active {
+   transform: scale(0.95);
+}
+
+
+
 
 /* about page */
 .about-page {
-   border: 1px solid black;
+   /* border: 1px solid black; */
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -122,20 +180,40 @@ body {
 }
 
 .about-page-center {
+   border: 3px solid #0078D4;
    width: 80%;
    padding: 20px;
    background-color: #EDEDED;
    border-radius: 10px;
-   display: flex;
+   display: grid;
+   gap: 10px;
 }
 
-.about-page-component {
-   border: 1px solid black;
-   width: 50%;
+.about-page-center h2 {
+   color: #0078D4;
+   padding: 10px;
+}
+
+.about-page-center p {
+   padding: 10px;
+}
+
+.about-page-component1 {
+   padding: 10px;
+   grid-column: 1;
+   grid-row: 1;
+}
+
+.about-page-component2 {
+   padding: 10px;
+   grid-column: 2;
+   grid-row: 1;
 }
 
 .about-page-component3 {
-   border: 1px solid black;
+   padding: 10px;
+   grid-column: 1 / span 2;
+   grid-row: 2;
 }
 
 
@@ -184,7 +262,7 @@ body {
 
    /* CSS styles specific to mobile phones (portrait) */
    .navbar {
-      height: 60px;
+      height: 50px;
    }
 
    .nav-logo1 {
@@ -216,7 +294,7 @@ body {
    }
 
    .home-page-center {
-      display: block;
+      display: inline;
       padding: 10px;
    }
 
@@ -232,4 +310,46 @@ body {
    .home-page {
       padding: 80px 0px;
    }
+
+
+   /* about page responsive */
+   .about-page-center {
+      width: auto;
+      padding: 5px;
+   }
+
+   .about-page-center p {
+      padding: 5px;
+   }
+
+   .about-page-center h2 {
+      padding: 5px;
+   }
+
+   .about-page-component1 {
+      grid-column: 1;
+      grid-row: 1;
+   }
+
+   .about-page-component2 {
+      grid-column: 1;
+      grid-row: 2;
+
+   }
+
+   .about-page-component3 {
+      grid-column: 1;
+      grid-row: 3;
+
+   }
+}
+
+/* text selection color */
+::selection {
+   background-color: #ffcc00;
+}
+
+/* for firefox particularly */
+::-moz-selection {
+   background-color: #ffcc00;
 }
