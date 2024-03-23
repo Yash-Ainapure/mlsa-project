@@ -28,7 +28,7 @@ body {
    border-bottom: 2px solid #203A61;
    background-color: #EDEDED;
    /* gap: 40px; */
-   
+
    position: fixed;
    top: 0;
    width: 100%;
@@ -42,13 +42,16 @@ body {
    align-self: flex-end;
    align-items: center;
    list-style: none;
+   padding-bottom: 15px;
 }
 
-.nav-logo {}
+.center-nav li a {
+   color: black;
+   text-decoration: none;
+}
 
 .nav-logo1 img {
    width: 150px;
-   height: auto;
 }
 
 .nav-logo2 img {
@@ -72,7 +75,8 @@ body {
    padding: 20px;
    width: 500px;
 }
-.home-page-left  p{
+
+.home-page-left p {
    padding: 20px 0px;
 }
 
@@ -83,7 +87,7 @@ body {
 
 .home-page-left button {
    margin: 20px 0px;
-   border: 1px solid #203A61;
+   border: 3px solid #203A61;
    background-color: #0078D4;
    border-radius: 5px;
    font-weight: 700;
@@ -125,10 +129,107 @@ body {
    display: flex;
 }
 
-.about-page-component{
+.about-page-component {
    border: 1px solid black;
    width: 50%;
 }
-.about-page-component3{
+
+.about-page-component3 {
    border: 1px solid black;
+}
+
+
+
+
+.navbar-toggle {
+   display: none;
+   background: none;
+   border: none;
+   color: black;
+   font-size: 20px;
+   cursor: pointer;
+   font-size: 30px;
+}
+
+/* Sidebar styles */
+.sidebar {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #333;
+   overflow-x: hidden;
+   padding-top: 60px;
+   transition: 0.5s;
+}
+
+.sidebar-items {
+   list-style-type: none;
+   padding: 0;
+}
+
+.sidebar-items li {
+   padding: 15px;
+}
+
+.sidebar-items li a {
+   color: white;
+   text-decoration: none;
+}
+
+/* responsiveness home page */
+@media (max-width: 600px) {
+
+   /* CSS styles specific to mobile phones (portrait) */
+   .navbar {
+      height: 60px;
+   }
+
+   .nav-logo1 {
+      display: none;
+   }
+
+   .nav-logo2 {
+      display: none;
+   }
+
+   .center-nav {
+      display: none;
+   }
+
+   .navbar-toggle {
+      display: block;
+   }
+
+   .sidebar {
+      padding-top: 15px;
+   }
+
+   .home-page-left p {
+      display: none;
+   }
+
+   .home-page-left h2 {
+      font-size: 40px;
+   }
+
+   .home-page-center {
+      display: block;
+      padding: 10px;
+   }
+
+   .home-page-right img {
+      width: 200px;
+      height: auto;
+   }
+
+   .home-page-left {
+      width: 200px;
+   }
+
+   .home-page {
+      padding: 80px 0px;
+   }
 }
